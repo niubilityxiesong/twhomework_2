@@ -117,7 +117,7 @@ npm test
 ```
 运行指定测试：
 ```
-node_modules/jasmine/bin/jasmine.js spec/section-1/practice-1-spec.js
+node_modules/jasmine/bin/jasmine.js spec/practice-1/main-spec.js
 ```
 用任意编辑器打开clone下来的文件夹，内部会存在两个文件夹
 ```
