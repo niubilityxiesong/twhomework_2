@@ -5,7 +5,6 @@ module.exports = class Class {
         this.leader = -1;
         this.invited = -1;
         this.teacher = [];
-        this.students = [];
     }
 
     assignLeader(student){
@@ -22,7 +21,6 @@ module.exports = class Class {
     }
 
     appendMember(student){
-        this.students.push(student);
         for (let i = 0; i < this.teacher.length; i++) {
             this.teacher[i].notifyStudentAppended(student.name + ' has joined Class ' + student.clazz.number);
         }
