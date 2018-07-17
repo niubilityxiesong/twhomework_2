@@ -4,6 +4,7 @@ module.exports = class Teacher extends Person{
     constructor(name, age, classes){
         super(name, age);
         this.clazzes = classes;
+        this.clazzes.forEach(clazzes => clazzes.teacher.push(this));
     }
 
     introduce(){
@@ -26,7 +27,11 @@ module.exports = class Teacher extends Person{
         return false;
     }
 
-    notifyStudentAppended(){
+    notifyStudentAppended(array){
+        console.log(array);
+    }
 
+    notifyLeaderAssigned(array){
+        console.log(array);
     }
 }
