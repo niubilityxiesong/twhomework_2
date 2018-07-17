@@ -17,8 +17,10 @@ module.exports = class Teacher extends Person{
 
     isTeaching(student){
         for (let i = 0; i < this.clazzes.length; i++) {
-            if(this.clazzes[i].number === student.clazz.number){
-                return true;
+            if(student.clazz.number === this.clazzes[i].number){
+                if(this.clazzes[i].invited === 1){
+                    return true;
+                }
             }
         }
         return false;

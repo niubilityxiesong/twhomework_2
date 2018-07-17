@@ -21,10 +21,4 @@ module.exports = class Class {
         student.clazz.invited = 1;
     }
 
-    hasStudent(){
-        if(this.invited === -1)
-            return false;
-        else
-            return true;
-    }
 }
