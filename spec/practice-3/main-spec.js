@@ -3,9 +3,19 @@ const Student = require('../../main/practice-3/student');
 const Teacher = require('../../main/practice-3/teacher');
 const Class = require('../../main/practice-3/class');
 
+let person;
+let student;
+let clazz;
+
+beforeAll(function () {
+    person = new Person("Tom", 21);
+    clazz = new Class(2);
+    student = new Student("Tom", 21, clazz);
+});
+
 describe("Person", () => {
   it("should have field name and age", () => {
-    let person = new Person("Tom", 21);
+    //let person = new Person("Tom", 21);
     expect(person.name).toBe("Tom");
     expect(person.age).toBe(21);
   });
@@ -22,8 +32,8 @@ describe("Person", () => {
 
 describe("Student", () => {
   it("should have field name, age and class", () => {
-    let clazz = new Class(2);
-    let student = new Student("Tom", 21, clazz);
+    //let clazz = new Class(2);
+    //let student = new Student("Tom", 21, clazz);
     expect(student.name).toBe("Tom");
     expect(student.age).toBe(21);
     expect(student.clazz).toBe(clazz);
